@@ -52,15 +52,19 @@ export default function Login() {
       } else {
         navigate("/dashboard");
       }
-    } catch (error) {
-      console.error("Login Error:", error);
+    } 
+    catch (error) {
+  console.log("FULL ERROR:", error);
+  console.log("RESPONSE:", error.response);
+  console.log("DATA:", error.response?.data);
 
-      alert(
-        error.response?.data?.message ||
-        error.message ||
-        "Login Failed"
-      );
-    } finally {
+  alert(
+    error.response?.data?.message ||
+    error.message ||
+    "Login Failed"
+  );
+} 
+    finally {
       setLoading(false);
     }
   };
