@@ -6,7 +6,7 @@ import {
   GraduationCap
 } from "lucide-react";
 
-import API from "../apis/axios"; // Adjust path if needed
+ import API from "../../apis/axios";   // Adjust path if needed
 
 export default function Login() {
   const navigate = useNavigate();
